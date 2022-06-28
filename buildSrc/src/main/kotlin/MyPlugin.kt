@@ -5,8 +5,8 @@ import org.gradle.api.Project
 
 class MyPlugin : Plugin<Project> {
     override fun apply(project: Project) {
-        project.tasks.register("okhttp") { task ->
-            task.doLast {
+        project.tasks.register("okhttp") {
+            doLast {
                 println("Attempting to use okhttp...")
                 useOkHttp()
                 println("... attempt appears to have been successful!")
